@@ -1,6 +1,15 @@
 <template>
-  <v-list dark flat color="success" width="280" height="100%" min-height="100vh">
+  <!-- dark 控制字體色，color 控制背景色 -->
+  <v-list
+    dark
+    flat
+    color="success"
+    width="280"
+    height="100%"
+    min-height="100vh"
+  >
     <v-list-item-group v-model="item">
+      <!-- color 控制激活的字體色 -->
       <v-list-item color="warning" v-for="(item, i) in items" :key="i">
         <v-list-item-icon>
           <v-icon v-text="item.icon"></v-icon>
