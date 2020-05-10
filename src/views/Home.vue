@@ -3,12 +3,21 @@
     <List />
     <div style="width: calc(100% - 280px);">
       <Bar />
-      <div class="pa-8">
-        <Card class="mb-8" />
-        <UploadAvatar class="mb-8" />
-        <v-btn class="white--text mr-8" color="primary">按鈕</v-btn>
-        <Dialog />
-      </div>
+      <v-row no-gutters class="pa-8">
+        <v-col>
+          <Card class="mb-8" />
+          <UploadAvatar class="mb-8" />
+          <v-btn class="white--text mr-8" color="primary">按鈕</v-btn>
+          <Dialog />
+          <v-btn
+            id="switchTheme"
+            class="white--text"
+            color="warning"
+            @click="switchTheme"
+          >切換淺色與深色模式</v-btn>
+        </v-col>
+        <v-col>Right</v-col>
+      </v-row>
     </div>
   </v-row>
 </template>
@@ -32,5 +41,9 @@ import UploadAvatar from '@/components/UploadAvatar.vue';
     UploadAvatar,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  switchTheme() {
+    this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+  }
+}
 </script>

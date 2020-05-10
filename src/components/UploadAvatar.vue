@@ -1,13 +1,13 @@
 <template>
-  <div class="upload">
-    <v-card class="img-content mb-4" elevation="6" width="300px" height="300px">
+  <div class="vs-upload">
+    <v-card elevation="8" width="300" height="300">
       <v-img :src="image" width="100%" height="100%"></v-img>
     </v-card>
 
-    <!-- color 控制背景色ㄋ -->
+    <!-- color 控制背景色 -->
     <v-avatar size="60" color="primary">
       <label style="cursor: pointer;">
-        <!-- color 控制背景色ㄋ -->
+        <!-- color 控制 icon 色 -->
         <v-icon color="white">fas fa-cloud-upload-alt</v-icon>
         <input class="d-none" type="file" @change="uploadImage" />
       </label>
@@ -38,19 +38,15 @@ export default class UploadAvatar extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.upload {
+.vs-upload {
   width: 300px;
   height: 300px;
   position: relative;
 
-  .img-content {
-    border-radius: 16px;
-  }
-
   .v-avatar {
+    position: absolute;
     bottom: -20px;
     right: -20px;
-    position: absolute;
   }
 }
 </style>

@@ -10,6 +10,7 @@ export default new Vuetify({
     iconfont: 'fa',
   },
   theme: {
+    dark: false,
     themes: {
       light: {
         danger: '#F76D6D',
