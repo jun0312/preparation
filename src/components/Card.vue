@@ -1,7 +1,7 @@
 <template>
   <v-card width="600">
     <!-- class 控制字體色，style 控制背景色 -->
-    <v-card-title class="white--text" style="backgroundColor: #62CFBB;">預設內容外框樣式</v-card-title>
+    <v-card-title :style="`background-color: ${ blockColor.color }`">預設內容外框樣式</v-card-title>
     <div class="px-4 py-8">
       <span>
         Lorem ipsum dolor sit amet,
@@ -19,9 +19,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
-export default class Card extends Vue {}
+export default class Card extends Vue {
+  @Prop() blockColor!: object;
+}
 </script>

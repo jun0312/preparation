@@ -1,12 +1,11 @@
 <template>
   <!-- dark 控制字體色，color 控制背景色 -->
   <v-list
-    dark
     flat
-    color="success"
     width="280"
     height="100%"
     min-height="100vh"
+    :color="blockColor.color"
   >
     <v-list-item-group v-model="item">
       <!-- color 控制激活的字體色 -->
@@ -23,11 +22,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
 export default class List extends Vue {
+  @Prop() blockColor!: object;
+
   item = 1;
 
   items = [

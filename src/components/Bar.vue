@@ -1,6 +1,6 @@
 <template>
   <!-- dark 控制字體色，color 控制背景色 -->
-  <v-app-bar dark color="primary">
+  <v-app-bar color="primary">
     <v-img class="mr-4" src="@/assets/logo.png" max-width="48px"></v-img>
     <v-toolbar-title>智遇動物醫院</v-toolbar-title>
     <v-spacer></v-spacer>
@@ -16,8 +16,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import { Vue, Component } from 'vue-property-decorator';
 
 @Component
 export default class Bar extends Vue {}

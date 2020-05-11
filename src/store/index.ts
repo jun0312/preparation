@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import vuetify from '@/plugins/vuetify';
+
+// Modules
+import colors from './modules/colors';
 
 Vue.use(Vuex);
 
@@ -8,5 +10,5 @@ export default new Vuex.Store({
   state: {},
   mutations: {},
   actions: {},
-  modules: {},
+  modules: { colors },
 });
