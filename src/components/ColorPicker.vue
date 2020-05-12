@@ -29,6 +29,7 @@
         <v-btn color="secondary" @click="dialog = false">取消</v-btn>
         <v-btn color="warning" @click="RESET_COLOR">重置</v-btn>
         <v-btn
+          id="confirm"
           color="primary"
           @click="SWITCH_COLOR({ selectColor, selectBlock })"
         >確定</v-btn>
